@@ -9,7 +9,9 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 #   deploy_to    - Path to deploy into.
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
-
+set :user, 'deployer'
+set :forward_agent, 'true'
+set :term_mode, :system
 set :domain, '128.199.86.100'
 set :deploy_to, '/var/www/mynewapp'
 set :repository, 'https://github.com/programoo/mynewapp.git'
